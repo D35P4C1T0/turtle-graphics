@@ -12,7 +12,7 @@ struct Cursore {
   char simbolo;
   char direzione;  // N, S, W, E per su, giù, sinistra e destra
   int x, y;
-  int inSrittura;
+  int inScrittura;
   char carattereCalpestato;
 } cursore = {.simbolo = simboloTartaruga,
              .direzione = 'N',
@@ -25,11 +25,11 @@ char tela[MAXH][MAXW];
 /////////////// pre-dichiaro le funzioni ////////////////
 void alzaPenna() {
   cursore.simbolo = simboloTartaruga;
-  cursore.inSrittura = 0;
+  cursore.inScrittura = 0;
 }
 void abbassaPenna() {
   cursore.simbolo = simboloPenna;
-  cursore.inSrittura = 1;
+  cursore.inScrittura = 1;
 }
 void liberaSchermo() { printf("\e[1;1H\e[2J"); }  // unix only
 ////////////////////////////////////////////////////////
@@ -87,7 +87,7 @@ int main() {
         break;
 
       case '5':
-        if (cursore.inSrittura)
+        if (cursore.inScrittura)
           disegna(passi, altezzaTela, larghezzaTela);
         else
           trasla(passi, altezzaTela, larghezzaTela);
