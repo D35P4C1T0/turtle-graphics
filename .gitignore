@@ -1,1 +1,31 @@
-**/*.out
+# File oggetto
+*.o
+
+# File eseguibili
+*.out
+*.exe
+
+# Directory contenente i file oggetto
+obj/
+
+# File di configurazione generati
+configure
+config.log
+config.status
+
+# File di log
+*.log
+
+# File di backup
+*~
+
+# File temporanei
+*.tmp
+
+# File di output
+*.out
+*.output
+
+# Cache della compilazione
+.ccache/
+
